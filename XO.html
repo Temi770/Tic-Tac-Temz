@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="XO.css">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+<audio id="clickSound" src="click.mp3.wav"></audio>
+<audio id="winSound" src="win.mp3.wav"></audio>
+<audio id="drawSound" src="draw.mp3.wav"></audio>
+
+    
+        <h1><i class="fas fa-gamepad"></i> 3pleT</h1>
+        
+        <div id="scoreboard">
+            <i class="fas fa-user text-x"></i> Player ❌: <span id="scoreX">0</span> |
+            <i class="fas fa-user text-o"></i> Player ⭕: <span id="scoreO">0</span>
+        </div>
+        
+        <div id="status"><i class="fas fa-bullhorn"></i> Player ❌'s turn</div>
+        <div>
+        <button id="restartBtn">
+            <i class="fas fa-rotate-right"></i> Restart Game
+        </button></div>
+
+    
+    
+<label>
+    <input type="checkbox" id="aiToggle"> Play against AI
+</label>
+
+    <div id="gameBoard">
+        <div class="cell" data-index="0"></div>
+        <div class="cell" data-index="1"></div>
+        <div class="cell" data-index="2"></div>
+        <div class="cell" data-index="3"></div>
+        <div class="cell" data-index="4"></div>
+        <div class="cell" data-index="5"></div>
+        <div class="cell" data-index="6"></div>
+        <div class="cell" data-index="7"></div>
+        <div class="cell" data-index="8"></div>
+    </div>
+    <button id="restartBtn">3pleT</button>
+
+<a href="https://github.com/Temi770/Tic-Tac-Temz/archive/refs/heads/main.zip" download>
+    <button id="downloadBtn">Download Game</button>
+</a>
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="XOicon.png.png">
+
+    <script src="XO..js"></script>
+</body>
+
+</html>

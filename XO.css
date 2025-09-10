@@ -1,0 +1,147 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to bottom right, #1e1e2f, #3a3a5f);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffd700;
+    text-shadow: 1px 1px 2px #000;
+}
+
+#status,
+#scoreboard {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #ffeb3b;
+}
+
+/* Game Board */
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    max-width: 320px;
+    margin: 0 auto 20px;
+}
+
+/* Cells */
+.cell {
+    aspect-ratio: 1 / 1;
+    font-size: 2.5em;
+    background-color: #2e2e3e;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: #ffd700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.cell:hover {
+    background-color: #44445f;
+    transform: scale(1.05);
+}
+
+.cell.clicked {
+    animation: bounce 0.3s ease;
+}
+
+.winning-cell {
+    background-color: #00c853 !important;
+    color: #fff;
+    animation: flash 0.5s ease-in-out 3;
+}
+
+/* Buttons */
+#restartBtn,
+#downloadBtn {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    margin: 10px;
+}
+
+#restartBtn:hover {
+    background-color: #f50057;
+}
+
+#downloadBtn {
+    background-color: #4CAF50;
+}
+
+#downloadBtn:hover {
+    background-color: #45a049;
+}
+
+/* Text Colors */
+.text-x {
+    color: #ff5722;
+}
+
+.text-o {
+    color: #03a9f4;
+}
+
+/* Animations */
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes flash {
+
+    0%,
+    100% {
+        background-color: #fff;
+    }
+
+    50% {
+        background-color: gold;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #gameBoard {
+        max-width: 90vw;
+        gap: 8px;
+    }
+
+    .cell {
+        font-size: 2em;
+    }
+
+    #restartBtn,
+    #downloadBtn {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
