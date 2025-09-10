@@ -1,0 +1,20 @@
+{
+  "name": "Tic-Tac-Temz",
+  "short_name": "Temz",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4CAF50",
+  "icons": [
+    {
+      "src": "XOicon.png.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "XOicon.png.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
